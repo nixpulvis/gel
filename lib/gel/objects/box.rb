@@ -1,5 +1,6 @@
 class Gel
   class Box
+    include Gl, Glu, Glut
     attr_accessor :position, :rotation, :width, :height, :depth, :colors
 
     def initialize(w, h, d, c = [0.5,0.5,0.5])

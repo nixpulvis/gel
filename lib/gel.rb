@@ -1,4 +1,6 @@
 require 'opengl'
+require 'glu'
+require 'glut'
 require 'gel/version'
 require 'gel/objects'
 
