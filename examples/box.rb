@@ -2,7 +2,7 @@ require 'bundler/setup'
 require 'gel'
 
 module Examples
-  class RandomBox < Gel::Box
+  class RandomBox < Gel::Object::Box
 
     def initialize(color)
       super 0.25, 0.75, 0.5, color

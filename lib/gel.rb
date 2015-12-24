@@ -2,7 +2,7 @@ require 'opengl'
 require 'glu'
 require 'glut'
 require 'gel/version'
-require 'gel/objects'
+require 'gel/object'
 
 class Gel
   include Gl, Glu, Glut

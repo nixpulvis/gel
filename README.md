@@ -1,29 +1,30 @@
 # Gel
 
-This is an extremely simple interface to the OpenGL engine. It relys on knowledge of OpenGL to use, and makes getting started faster by doing the proper setup and providing the proper hooks.
+This is an extremely simple interface to the OpenGL engine. It relies on little knowledge of OpenGL to use, and makes getting started faster by doing the proper setup and providing the proper hooks. This library is inspired by Racket's big bang family of functions from `htdp/universe`.
 
-## class Gel
+## The `Gel` Class
 
-The main class `Gel` should be inherited in the class containing the top level logic for the program. The following hooks are called to render the graphics.
+The main class `Gel` should be inherited in the class containing the top level logic for the program. This should be thought of as your main class, kind of like a main function.
 
-### setup
+```rb
+class Example < Gel
+    def setup
+    end
 
-Code to be executed before the OpenGL loop starts. This is where any initialization should happen. It is recommended that any variables needed in other hooks be saved in instance variables.
+    def draw
+    end
 
-### draw
+    def loop
+    end
 
-The code to be called when OpenGL asks for a new image of the scene. `Gel::Objects` should be favored over hand writing the vertexes in this function.
+    def keyboard
+    end
 
-### loop
+    def special_keyboard
+    end
+end
+```
 
-Called when OpenGL is idle.
+## Objects
 
-TODO:L Make a game loop, with a notion of frame-rate.
-
-### keyboard
-
-Hook to handle the keyboard event, including all ASCII symbols.
-
-### special_keyboard
-
-Hook to handle the non ASCII keyboard symbols.
+In addition to making setup of the basic OpenGL environment easier, Gel also provides a few objects that can be drawn. These make creating very simple animations easy.
